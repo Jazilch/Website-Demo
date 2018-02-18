@@ -1,8 +1,3 @@
-javascript: (function() {
-    var a = document.createElement("script");
-    a.src = "//github.com/Jazilch/Website-Demo/blob/master/FinalWebsitegit.js";
-    document.getElementsByTagName("head")[0].appendChild(a)
-})();
 
 // Fade In For Page Header 
 
