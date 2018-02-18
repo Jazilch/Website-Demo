@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Damion');
-
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 html {
  	color: #fff;
  	font-family: Montserrat;
@@ -25,6 +25,11 @@ h3 {
 
 p {
 	font-size: 24px;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 26px;
 }
 .span12 {
 	width: 100%;
@@ -84,7 +89,7 @@ p {
 	font-size: 1em;
 }
 i.fa.fa-window-close {
-	font-size: 2em;
+	font-size: 5vh;
 	transition: all .3s
 }
 i.fa.fa-window-close:hover {
@@ -114,14 +119,19 @@ i.fa.fa-window-close:hover {
 	border-style: solid;
 	border-width: 2px;
 	border-color: transparent;
-	transition: .5s ease-out;
+	transition: .4s ease-out;
 }
 
-.menu ul li:hover {
+.menu ul li.menu-item:hover {
 	border-style: solid;
 	border-color: #fff;
+	background-color: #fff;
+	color: gray;
 	border-width: 2px;
 	border-radius: 2px;
+}
+.menu ul li:hover a {
+	color: gray;
 }
 .menu ul li::after {
 	content: "  \f078";
@@ -153,18 +163,21 @@ li.menu-logo {
 .menu ul a {
 	text-decoration: none;
 	color: #fff;
+	font-size: 18px;
 }
 /* Mobile Nav */
 .mobileNav {
 	display: none;
 }
+.fa {
+	cursor: pointer;
+}
 .mobileNavContainer {
 	width: 100%;
 }
 .mobileIcon {
-	position: absolute;
-	top: 40px;
-	right: 15%;
+	position: static;
+	padding-top: 1em;
 	font-size: 2.5em;
 	text-align: right;
 }
@@ -172,6 +185,29 @@ li.menu-logo {
 	text-align: left;
 }
 
+.mobileMenu {
+	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(-50vh);
+}
+
+.mobileMenu-Items {
+	background-color: #222;
+  list-style: none;
+  padding: 1em 0;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+}
+
+.show-mobile-menu {
+	transform: translateY(0);
+	opacity: 1;
+	transition: all .6s;
+}
 
 @media screen and (max-width:768px) {
 	.mobileNav {
@@ -480,6 +516,7 @@ li.menu-logo {
 	display: inline-block;
 	padding-left: 20px;
 	padding-right: 20px;
+	transition: all .8s;
 }
 .footer ul li:first-child:after {
 	content: "\f16d";
