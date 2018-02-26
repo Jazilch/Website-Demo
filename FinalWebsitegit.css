@@ -307,7 +307,7 @@ li.menu-logo {
 }
 
 .banner1-container {
-	width: 50%;
+	width: 80%;
 	margin: 0 auto;
 	text-align: center;
 	box-sizing: border-box;
@@ -477,7 +477,7 @@ li.menu-logo {
 /* Banner 4 */
 .about-us {
 	box-sizing: border-box;
-	padding: 40px;
+	padding: 42px;
 	background-color: #000;
 	text-align: center;
 	color: #00ffe4;
